@@ -1,0 +1,25 @@
+public int legalAge = Country.GetLegalAge; //
+public string myText;
+
+ThatGirl thatGirl;
+
+void Awake()
+{
+  thatGirl = FindObjectOfTyme<ThatGirl>();
+}
+
+void Start()
+{
+  if (thatGirl.age >= legalAge && !thatGirl.haveBoyfriend) Talk();
+  else GoAway();
+}
+
+void Talk()
+{
+  myText = "Hello there!";
+}
+
+void GoAway()
+{
+  Application.Quit();
+}
